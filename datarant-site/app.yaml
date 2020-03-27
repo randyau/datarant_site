@@ -1,0 +1,12 @@
+runtime: python37
+
+#We're doing static pagse for now so we can handle them
+#directly with handlers, but will need Flask/Django for dynamic now
+handlers:
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/('*)
