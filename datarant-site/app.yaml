@@ -1,4 +1,6 @@
 runtime: python37
+#static files cache expiry
+default_expiration: "1m"
 
 #We're doing static pagse for now so we can handle them
 #directly with handlers, but will need Flask/Django for dynamic now
@@ -6,6 +8,18 @@ handlers:
 - url: /
   static_files: www/index.html
   upload: www/index.html
+
+- url: /css
+  static_dir: www/css
+
+- url: /fonts
+  static_dir: www/fonts
+
+- url: /images
+  static_dir: www/images
+
+- url: /js
+  static_dir: www/js
 
 - url: /(.*)
   static_files: www/\1
