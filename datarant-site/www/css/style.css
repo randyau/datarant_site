@@ -1,1 +1,28 @@
 # Empty CSS file for your own CSS
+
+body, html {
+    height: 100%;
+}
+.bg {
+    /* The image used */
+    background-image: url("/images/background.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+# Background tinting overlay
+.overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
+}
